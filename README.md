@@ -4,25 +4,22 @@
 ![Rank](https://make.fun/badge/news-image-20261120/abduljunior425/news-image-20/rank.svg)
 ![Reward](https://make.fun/badge/news-image-20261120/abduljunior425/news-image-20/reward.svg)
 
-An illustrated collage summing up the world's news of **Friday 20 November 2026** — 36 stories across six continents — entered in the [news-image-20261120 bounty](https://make.fun/bounty/news-image-20261120) on make.fun.
+A dense broadsheet summing up the world's news of **Friday 20 November 2026** in **51 stories across six continents**, entered in the [news-image-20261120 bounty](https://make.fun/bounty/news-image-20261120) on make.fun: 3 lead stories, a world map with 12 numbered pins, a UTC timeline of the day, 33 briefs grouped by region, and a sources footer with a date check.
 
-## The six lead stories
+## The three lead stories
 
-- **Lead — Shenzhen pledge.** Trump, Xi and Putin issue a joint peace pledge after their first trilateral talks in Shenzhen. The talks were held on Thursday 19 November; the declaration was reported on Friday 20 November.
-- **Myanmar rejects the ICJ ruling.** Myanmar calls the World Court's Rohingya genocide ruling "unfair". The verdict, delivered 19 November by 9–6, was the first ever to find a state guilty of genocide.
-- **Kyiv under fire.** Russia fires 400+ drones and 110+ missiles overnight; three bridges over the Dnipro in Kyiv are hit. At least 8 people are killed and about 30 hurt; Ukrainian air defences say 462 targets were downed.
-- **Gaza strikes kill six.** Israeli strikes kill six people in Gaza on 20 November, a day after the military said its ground operation in central Gaza had ended.
-- **Cyclone Akvan landfall.** The cyclone crosses the coast near Gopalpur, Odisha, between 07:30 and 08:30 IST. Winds reach 70–80 km/h; more than 300,000 people are evacuated; no deaths are reported in the first check.
-- **Gulf on edge.** The US Navy blockades Iranian shipping in the Strait of Hormuz. A Houthi strike hits Riyadh's PIF Tower; a tanker burns; Saudi defences shoot down a missile and five drones.
+- **Shenzhen declaration.** Trump, Xi and Putin issue a joint peace pledge after their first trilateral talks: "a nuclear war cannot be won and must never be fought". The talks were held on Thursday 19 November at Kylin Villa, Shenzhen; the declaration was reported on Friday 20 November. Trump called the meeting "bigger than Yalta" and rated it "12 out of 10".
+- **Kyiv under fire.** Russia fires 400+ drones and 110+ missiles at Ukraine overnight; three bridges over the Dnipro in Kyiv are hit, 8 people are killed and about 30 injured, and two Russian missiles fall in Poland's Lublin and Subcarpathian regions, a NATO member, with no casualties. Ukraine says it intercepted 462 targets.
+- **Cyclone Akvan makes landfall.** The cyclone crosses the coast near Gopalpur, Odisha, at 02:00–03:00 UTC on 20 November, with winds of 70–80 km/h gusting to 90; more than 300,000 people were evacuated and no deaths were reported in the first assessment.
 
-**Also in the image:** a world-map strip with the six lead stories pinned, a day-sequence timeline (overnight / morning / midday / evening), and 30 more briefs — including Russian missiles landing in Poland, the seventh straight day of falling global markets (S&P 500 −3.7% into correction, Nvidia −14%), the COP31 climate talks running past their deadline in Antalya, and Ukraine retaking 14 settlements in Kharkiv region. Events that happened on 19 November are labelled with their date.
+Every story in the image happened on, or was first reported on, Friday 20 November 2026; follow-ups from 19 November (the ICJ ruling, the Shenzhen talks themselves, the Senate bill, the Somalia expulsion order, the Denmark Arctic vote, the Raoni land recognition) are labelled with their date.
 
 ## How it runs
 
-`main.ts` (Node, standard library only, no network) copies `entry.png` to `$MAKEFUN_OUTPUT_DIR` (default `/output`) and fails loudly if the copied file's size differs from the source or if its PNG magic bytes are wrong.
+`main.ts` (Node, standard library only, no network) copies `entry.png` to `$MAKEFUN_OUTPUT_DIR` (default `/output`), checks the PNG magic bytes before and after copying, and fails loudly on a size mismatch or a file over the 1 MiB gate.
 
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-`entry.png` is a 1024×1024 PNG, under 1 MiB. The illustration was generated for this entry and all text was typeset on top of it, so every word is crisp at any size.
+`entry.png` is a 1024×1024 PNG, under 1 MiB. The three lead illustrations were generated for this entry and all text was typeset on top of them, so every word is crisp at any size.
